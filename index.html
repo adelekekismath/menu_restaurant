@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- CSS -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=" Restaurant virtual order ">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Orbitron:wght@400..900&family=Smythe&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>Jimmy's Diner</title>
+</head>
+
+<body>
+	<header >
+		<div class="banner" aria-label="The restaurant banner who's show a burger and the restaurant name" role="img">
+			<h1 class="restaurant-name">Jimmy's Diner</h1>
+			<p class="restaurant-slogan">The best burgers and pizzas in town.</p>
+		</div>
+	</header>
+	<main id="container">
+		<section class="menu" id="menu-list"></section>
+		<section id="order" class="hidden">
+			<h2>Your order</h2>
+			<div id="cart-detail"></div>
+			<div id="total-price-layout"> <h2>Total price: </h2> <p id="total-price"></p> </div>
+			<button id="complete-btn" class="submit-btn">Complete order</button>
+		</section>
+		<section  id="modal-overlay" class="hidden">
+			<div id="card-detail-modal">
+				<button id="close-btn" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+				<h2>Enter card details</h2>
+				<form id="card-detail-form">
+					<input type="text" name="clientName" id="clientName" placeholder="Enter your name" required>
+					<input type="text" name="card-number" id="card-number" placeholder="Enter card number" required maxlength="19">
+					<input type="text" name="cvv" id="cvv" placeholder="Enter CVV" required maxlength="3">
+					<button id="pay-btn" type="submit" class="submit-btn">Pay</button>
+				</form>
+			</div>
+		</section>
+		<section id="order-launched" class="hidden">
+			<h2 id="order-launched-message"></h2>
+		</section>
+	</main>
+	<script src="index.js" type="module"></script>
+</body>
+
+</html>
